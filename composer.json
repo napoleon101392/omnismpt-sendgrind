@@ -1,0 +1,29 @@
+{
+    "name": "napoleon/omnismtp-sendgrid",
+    "description": "Sendgrid driver for SMTP processing library",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Napoleon Carino",
+            "email": "napoleon101392@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "crazymeeks/omnismtp": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Napoleon\\OmniSmtp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SendGrid\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5.0"
+    }
+}
