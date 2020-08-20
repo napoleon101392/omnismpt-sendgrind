@@ -3,8 +3,7 @@
 namespace Napoleon\OmniSmtp;
 
 use SendGrid\Mail\Mail;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Log;
+use OmniSmtp\Exceptions\OmniMailException;
 
 class SendGrid extends Base
 {
