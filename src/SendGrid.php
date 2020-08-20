@@ -2,27 +2,18 @@
 
 namespace Napoleon\OmniSmtp;
 
-use OmniSmtp\Common\ProviderInterface;
+use SendGrid\Mail\Mail;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Log;
 
-class SendGrid implements ProviderInterface
+class SendGrid extends Base
 {
-    /**
-     * Set authorization header name
-     *
-     * @param string $bearer
-     *
-     * @return $this
-     */
-    public function setAuthorizationHearerName(string $bearer = 'Authorization')
-    {}
+    protected $sendgrid;
 
-    /**
-     * Get authorization header name
-     *
-     * @return string
-     */
-    public function getAuthorizationHeaderName()
-    {}
+    public function __construct($apikey)
+    {
+        $this->apikey = $apikey;
+    }
 
     /**
      * Set mail subject
@@ -32,33 +23,11 @@ class SendGrid implements ProviderInterface
      * @return $this
      */
     public function setSubject(string $subject)
-    {}
+    {
+        $this->subject = $subject;
 
-    /**
-     * Get mail subject
-     *
-     * @return void
-     */
-    public function getSubject()
-    {}
-
-    /**
-     * Set mail content. This is an html content
-     *
-     * @param string $html
-     *
-     * @return $this
-     */
-    public function setContent(string $html)
-    {}
-
-    /**
-     * Get email html content
-     *
-     * @return $this
-     */
-    public function getContent()
-    {}
+        return $this;
+    }
 
     /**
      * Set smtp sender
@@ -70,15 +39,11 @@ class SendGrid implements ProviderInterface
      * @return $this
      */
     public function setFrom(string $from)
-    {}
+    {
+        $this->from = $from;
 
-    /**
-     * Get sender
-     *
-     * @return mixed
-     */
-    public function getFrom()
-    {}
+        return $this;
+    }
 
     /**
      * Set smtp recipients
@@ -88,31 +53,58 @@ class SendGrid implements ProviderInterface
      * @return $this
      */
     public function setRecipients(...$recipients)
-    {}
+    {
+        $this->recipients = $recipients;
+
+        return $this;
+    }
 
     /**
-     * Get recipients
+     * Set mail content. This is an html content
      *
-     * @return array
-     */
-    public function getRecipients()
-    {}
-
-    /**
-     * Set SMTP apikey
-     *
-     * @param string $apikey
+     * @param string $html
      *
      * @return $this
      */
-    public function setApiKey(string $apikey)
-    {}
+    public function setContent(string $html)
+    {
+        $this->content = $html;
+
+        return $this;
+    }
+
+    public function send()
+    {
+        $email = new Mail();
+        $email = $this->addTo($email);
+        $email->setFrom($this->from);
+        $email->setSubject($this->subject);
+        $email->addContent("text/plain", $this->content);
+
+        $response = (new \SendGrid($this->apikey))->send($email);
+
+        if (!in_array($response->statusCode(), [200, 201, 202])) {
+            throw OmniMailException::actualSendingEmailException(json_encode($response->content));
+        }
+
+        return true;
+    }
 
     /**
-     * Get SMTP api key
+     * Undocumented function
      *
-     * @return string|null
+     * @param [type] $mail
+     *
+     * @return Mail
      */
-    public function getApikey()
-    {}
+    protected function addTo($mail)
+    {
+        foreach ($this->recipients as $email) {
+            $mail->addTo($email);
+
+            unset($email);
+        }
+
+        return $mail;
+    }
 }
