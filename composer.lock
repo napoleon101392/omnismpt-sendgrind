@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b3cc26b33056406ba05eb81c0ddabbc9",
+    "content-hash": "8ce861fc24daa1b7a1e7c72104fe7ba3",
     "packages": [
         {
             "name": "crazymeeks/omnismtp",
@@ -133,12 +133,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "498158dd64cd0aaafdfc9e8ddf9d37e57d494d3e"
+                "reference": "1526581cd9bd043e1cf64d4aa9a9a44ae6ee571a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/498158dd64cd0aaafdfc9e8ddf9d37e57d494d3e",
-                "reference": "498158dd64cd0aaafdfc9e8ddf9d37e57d494d3e",
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/1526581cd9bd043e1cf64d4aa9a9a44ae6ee571a",
+                "reference": "1526581cd9bd043e1cf64d4aa9a9a44ae6ee571a",
                 "shasum": ""
             },
             "require": {
@@ -155,7 +155,10 @@
             "autoload": {
                 "psr-4": {
                     "Illuminate\\Support\\": ""
-                }
+                },
+                "files": [
+                    "helpers.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -169,7 +172,7 @@
             ],
             "description": "The Illuminate Collections package.",
             "homepage": "https://laravel.com",
-            "time": "2020-07-27T17:46:40+00:00"
+            "time": "2020-08-14T22:29:59+00:00"
         },
         {
             "name": "illuminate/contracts",
@@ -177,12 +180,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "6a33774e31962a570b59fbc6a979bd3b0a0dce7c"
+                "reference": "3a8bafdc33d36d35269fef0fe671b3a99ba49b24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/6a33774e31962a570b59fbc6a979bd3b0a0dce7c",
-                "reference": "6a33774e31962a570b59fbc6a979bd3b0a0dce7c",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/3a8bafdc33d36d35269fef0fe671b3a99ba49b24",
+                "reference": "3a8bafdc33d36d35269fef0fe671b3a99ba49b24",
                 "shasum": ""
             },
             "require": {
@@ -213,7 +216,7 @@
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "https://laravel.com",
-            "time": "2020-07-19T12:43:43+00:00"
+            "time": "2020-08-18T08:02:04+00:00"
         },
         {
             "name": "illuminate/macroable",
@@ -263,12 +266,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "2d0ec7b9d0cf7a5ddddc3eb1658e5c98869a0c26"
+                "reference": "f97ed829416d1617604b098cc6953ad7b91f8df6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/2d0ec7b9d0cf7a5ddddc3eb1658e5c98869a0c26",
-                "reference": "2d0ec7b9d0cf7a5ddddc3eb1658e5c98869a0c26",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/f97ed829416d1617604b098cc6953ad7b91f8df6",
+                "reference": "f97ed829416d1617604b098cc6953ad7b91f8df6",
                 "shasum": ""
             },
             "require": {
@@ -318,7 +321,7 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2020-07-27T17:48:37+00:00"
+            "time": "2020-08-18T08:02:04+00:00"
         },
         {
             "name": "ixudra/curl",
@@ -326,12 +329,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ixudra/curl.git",
-                "reference": "5a52f348aaea9e11d260bc87690ce0daa3ca5ed7"
+                "reference": "58fc74c92f3cf2986a3c86b4ad4ceb63f9f2f353"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ixudra/curl/zipball/5a52f348aaea9e11d260bc87690ce0daa3ca5ed7",
-                "reference": "5a52f348aaea9e11d260bc87690ce0daa3ca5ed7",
+                "url": "https://api.github.com/repos/ixudra/curl/zipball/58fc74c92f3cf2986a3c86b4ad4ceb63f9f2f353",
+                "reference": "58fc74c92f3cf2986a3c86b4ad4ceb63f9f2f353",
                 "shasum": ""
             },
             "require": {
@@ -365,14 +368,14 @@
                     "email": "jan.oris@ixudra.be"
                 }
             ],
-            "description": "Custom PHP Curl library for the Laravel 5 framework - developed by Ixudra",
+            "description": "Custom PHP Curl library for the Laravel framework - developed by Ixudra",
             "homepage": "http://ixudra.be",
             "keywords": [
                 "Ixudra",
                 "curl",
                 "laravel"
             ],
-            "time": "2020-06-02T06:32:55+00:00"
+            "time": "2020-08-07T13:39:13+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -380,12 +383,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "1f61206de973d67f36ce50f041c792ddac663c3e"
+                "reference": "0a4c1062e2cfeee795affd8e8d91d605377d3b7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/1f61206de973d67f36ce50f041c792ddac663c3e",
-                "reference": "1f61206de973d67f36ce50f041c792ddac663c3e",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/0a4c1062e2cfeee795affd8e8d91d605377d3b7b",
+                "reference": "0a4c1062e2cfeee795affd8e8d91d605377d3b7b",
                 "shasum": ""
             },
             "require": {
@@ -400,7 +403,7 @@
                 "kylekatarnls/multi-tester": "^2.0",
                 "phpmd/phpmd": "^2.8",
                 "phpstan/extension-installer": "^1.0",
-                "phpstan/phpstan": "^0.12.30",
+                "phpstan/phpstan": "^0.12.35",
                 "phpunit/phpunit": "^7.5 || ^8.0",
                 "squizlabs/php_codesniffer": "^3.4"
             },
@@ -451,7 +454,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2020-07-28T06:04:54+00:00"
+            "time": "2020-08-19T13:44:05+00:00"
         },
         {
             "name": "psr/container",
@@ -549,6 +552,163 @@
                 "simple-cache"
             ],
             "time": "2020-04-21T06:43:17+00:00"
+        },
+        {
+            "name": "sendgrid/php-http-client",
+            "version": "3.11.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sendgrid/php-http-client.git",
+                "reference": "b7e45dc6734357253217d63bf0d661fe18013e48"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sendgrid/php-http-client/zipball/b7e45dc6734357253217d63bf0d661fe18013e48",
+                "reference": "b7e45dc6734357253217d63bf0d661fe18013e48",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "phpunit/phpunit": "^5.7 || ^6.5",
+                "sebastian/version": "^1.0.6",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SendGrid\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matt Bernier",
+                    "email": "mbernier@twilio.com"
+                },
+                {
+                    "name": "Elmer Thomas",
+                    "email": "ethomas@twilio.com"
+                }
+            ],
+            "description": "HTTP REST client, simplified for PHP",
+            "homepage": "http://github.com/sendgrid/php-http-client",
+            "keywords": [
+                "api",
+                "fluent",
+                "http",
+                "rest",
+                "sendgrid"
+            ],
+            "time": "2020-08-19T19:09:43+00:00"
+        },
+        {
+            "name": "sendgrid/sendgrid",
+            "version": "7.8.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sendgrid/sendgrid-php.git",
+                "reference": "62b0499f03a5d3b963deeeb8d5119d92291ed83c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sendgrid/sendgrid-php/zipball/62b0499f03a5d3b963deeeb8d5119d92291ed83c",
+                "reference": "62b0499f03a5d3b963deeeb8d5119d92291ed83c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "ext-openssl": "*",
+                "php": ">=5.6",
+                "sendgrid/php-http-client": "~3.10",
+                "starkbank/ecdsa": "0.*"
+            },
+            "replace": {
+                "sendgrid/sendgrid-php": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7.9 || ^6.4.3",
+                "squizlabs/php_codesniffer": "3.*",
+                "swaggest/json-diff": "^3.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SendGrid\\Contacts\\": "lib/contacts/",
+                    "SendGrid\\EventWebhook\\": "lib/eventwebhook/",
+                    "SendGrid\\Helper\\": "lib/helper/",
+                    "SendGrid\\Mail\\": "lib/mail/",
+                    "SendGrid\\Stats\\": "lib/stats/"
+                },
+                "classmap": [
+                    "lib/BaseSendGridClientInterface.php",
+                    "lib/SendGrid.php",
+                    "lib/TwilioEmail.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "This library allows you to quickly and easily send emails through Twilio SendGrid using PHP.",
+            "homepage": "http://github.com/sendgrid/sendgrid-php",
+            "keywords": [
+                "email",
+                "grid",
+                "send",
+                "sendgrid",
+                "twilio sendgrid"
+            ],
+            "time": "2020-08-19T19:41:09+00:00"
+        },
+        {
+            "name": "starkbank/ecdsa",
+            "version": "0.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/starkbank/ecdsa-php.git",
+                "reference": "9369d35ed9019321adb4eb9fd3be21357d527c74"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/starkbank/ecdsa-php/zipball/9369d35ed9019321adb4eb9fd3be21357d527c74",
+                "reference": "9369d35ed9019321adb4eb9fd3be21357d527c74",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/ellipticcurve.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "StarkBank",
+                    "email": "developers@starkbank.com",
+                    "homepage": "https://starkbank.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "fast openSSL-compatible implementation of the Elliptic Curve Digital Signature Algorithm (ECDSA)",
+            "homepage": "https://github.com/starkbank/ecdsa-php",
+            "time": "2020-05-15T15:46:20+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -685,12 +845,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "a0485e88a72439c04c86e21e19e3f8540cc5898c"
+                "reference": "5ce4b8aa0450254c1aef7ff12c5a8e1545b291eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/a0485e88a72439c04c86e21e19e3f8540cc5898c",
-                "reference": "a0485e88a72439c04c86e21e19e3f8540cc5898c",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/5ce4b8aa0450254c1aef7ff12c5a8e1545b291eb",
+                "reference": "5ce4b8aa0450254c1aef7ff12c5a8e1545b291eb",
                 "shasum": ""
             },
             "require": {
@@ -755,7 +915,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2020-06-30T17:42:41+00:00"
+            "time": "2020-08-18T14:11:58+00:00"
         },
         {
             "name": "symfony/translation-contracts",
@@ -1129,12 +1289,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "1ac416df3f66c542f2d3688925105b539f064b64"
+                "reference": "f3ab30788f7d3e90c065c70a1658a464b8beff91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/1ac416df3f66c542f2d3688925105b539f064b64",
-                "reference": "1ac416df3f66c542f2d3688925105b539f064b64",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/f3ab30788f7d3e90c065c70a1658a464b8beff91",
+                "reference": "f3ab30788f7d3e90c065c70a1658a464b8beff91",
                 "shasum": ""
             },
             "require": {
@@ -1173,7 +1333,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2020-07-21T08:16:41+00:00"
+            "time": "2020-08-15T12:16:28+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -1489,7 +1649,7 @@
         },
         {
             "name": "phpunit/php-token-stream",
-            "version": "3.1.1",
+            "version": "3.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
@@ -1534,6 +1694,7 @@
             "keywords": [
                 "tokenizer"
             ],
+            "abandoned": true,
             "time": "2019-09-17T06:23:10+00:00"
         },
         {

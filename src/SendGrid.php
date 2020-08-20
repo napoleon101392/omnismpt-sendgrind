@@ -133,7 +133,7 @@ class SendGrid extends Base
         $response = (new \SendGrid($this->apikey))->send($email);
 
         if (!in_array($response->statusCode(), [200, 201, 202])) {
-            throw OmniMailException::actualSendingEmailException(json_encode($response->content));
+            throw OmniMailException::actualSendingEmailException(json_encode($response->body()));
         }
 
         return true;
