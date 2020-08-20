@@ -8,8 +8,53 @@ use Illuminate\Support\Facades\Log;
 
 class SendGrid extends Base
 {
+    /**
+     * Undocumented variable
+     *
+     * @var [type]
+     */
     protected $sendgrid;
 
+    /**
+     * Undocumented variable
+     *
+     * @var [type]
+     */
+    protected $subject;
+
+    /**
+     * Undocumented variable
+     *
+     * @var [type]
+     */
+    protected $from;
+
+    /**
+     * Undocumented variable
+     *
+     * @var [type]
+     */
+    protected $recipients;
+
+    /**
+     * Undocumented variable
+     *
+     * @var [type]
+     */
+    protected $content;
+
+    /**
+     * Undocumented variable
+     *
+     * @var [type]
+     */
+    protected $contentBodyType;
+
+    /**
+     * Undocumented function
+     *
+     * @param [type] $apikey
+     */
     public function __construct($apikey)
     {
         $this->apikey = $apikey;
@@ -73,13 +118,18 @@ class SendGrid extends Base
         return $this;
     }
 
+    /**
+     * Undocumented function
+     *
+     * @return void
+     */
     public function send()
     {
         $email = new Mail();
         $email = $this->addTo($email);
         $email->setFrom($this->from);
         $email->setSubject($this->subject);
-        $email->addContent("text/plain", $this->content);
+        $email->addContent($this->contentBodyType, $this->content);
 
         $response = (new \SendGrid($this->apikey))->send($email);
 
@@ -88,6 +138,20 @@ class SendGrid extends Base
         }
 
         return true;
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @param string $type
+     *
+     * @return void
+     */
+    public function contentBodyType($type = "text/plain")
+    {
+        $this->contentBodyType = $type;
+
+        return $this;
     }
 
     /**
