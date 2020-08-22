@@ -1,3 +1,6 @@
+### Installation
+`composer require napoleon/omnismtp-sendgrid`
+
 ### How to use
 
 #### Single Recipients
