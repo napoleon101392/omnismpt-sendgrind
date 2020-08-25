@@ -8,51 +8,45 @@ use OmniSmtp\Exceptions\OmniMailException;
 class SendGrid extends Base
 {
     /**
-     * Undocumented variable
+     * Mail subject
      *
-     * @var [type]
-     */
-    protected $sendgrid;
-
-    /**
-     * Undocumented variable
-     *
-     * @var [type]
+     * @var string
      */
     protected $subject;
 
     /**
-     * Undocumented variable
+     * Sender
      *
-     * @var [type]
+     * @var string
      */
     protected $from;
 
     /**
-     * Undocumented variable
+     * Recipients
      *
-     * @var [type]
+     * @var array
      */
     protected $recipients;
 
     /**
-     * Undocumented variable
+     * Body content
      *
-     * @var [type]
+     * @var string
      */
     protected $content;
 
     /**
-     * Undocumented variable
+     * The of the body content
+     * default to "text/plain"
      *
-     * @var [type]
+     * @var string
      */
     protected $contentBodyType;
 
     /**
-     * Undocumented function
+     * Instance
      *
-     * @param [type] $apikey
+     * @param string $apikey
      */
     public function __construct($apikey)
     {
@@ -64,7 +58,7 @@ class SendGrid extends Base
      *
      * @param string $subject
      *
-     * @return $this
+     * @return self
      */
     public function setSubject(string $subject)
     {
@@ -80,7 +74,7 @@ class SendGrid extends Base
      *
      * @param string $from
      *
-     * @return $this
+     * @return self
      */
     public function setFrom(string $from)
     {
@@ -94,7 +88,7 @@ class SendGrid extends Base
      *
      * @param array $recipients
      *
-     * @return $this
+     * @return self
      */
     public function setRecipients(...$recipients)
     {
@@ -108,7 +102,7 @@ class SendGrid extends Base
      *
      * @param string $html
      *
-     * @return $this
+     * @return self
      */
     public function setContent(string $html)
     {
@@ -118,9 +112,11 @@ class SendGrid extends Base
     }
 
     /**
-     * Undocumented function
+     * Creates an Mail instance
+     * Merge the collected data
+     * and sending it to recipients
      *
-     * @return void
+     * @return OmniMailException|boolean
      */
     public function send()
     {
@@ -140,11 +136,11 @@ class SendGrid extends Base
     }
 
     /**
-     * Undocumented function
+     * Mutator for body type
      *
      * @param string $type
      *
-     * @return void
+     * @return self
      */
     public function contentBodyType($type = "text/plain")
     {
@@ -154,13 +150,14 @@ class SendGrid extends Base
     }
 
     /**
-     * Undocumented function
+     * Manipulate recipeints to add in
+     * mail container
      *
-     * @param [type] $mail
+     * @param \SendGrid\Mail\Mail $mail
      *
-     * @return Mail
+     * @return \SendGrid\Mail\Mail
      */
-    protected function addTo($mail)
+    protected function addTo(Mail $mail)
     {
         foreach ($this->recipients as $email) {
             $mail->addTo($email);
@@ -173,6 +170,11 @@ class SendGrid extends Base
         return $mail;
     }
 
+    /**
+     * Dataset
+     *
+     * @return array
+     */
     public function getData()
     {
         $data = [
