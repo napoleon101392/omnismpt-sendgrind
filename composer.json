@@ -11,6 +11,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
+        "php": ">=7.3.0",
         "crazymeeks/omnismtp": "dev-master",
         "sendgrid/sendgrid": "~7"
     },
