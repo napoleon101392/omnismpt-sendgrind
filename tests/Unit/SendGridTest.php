@@ -20,7 +20,7 @@ class SendGridTest extends TestCase
             'content' => $content = '<p>Hello From SendGrid OmniMail</p>'
         ];
 
-        $sendgrid = OmniSmtp::create(\Napoleon\OmniSmtp\Sendgrid::class, 'api-key');
+        $sendgrid = OmniSmtp::create(\Napoleon\OmniSmtp\SendGrid::class, 'api-key');
 
         $response = $sendgrid->setSubject($subject)
             ->setFrom($sender)
