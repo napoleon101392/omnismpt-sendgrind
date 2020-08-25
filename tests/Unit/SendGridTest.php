@@ -14,12 +14,19 @@ class SendGridTest extends TestCase
 
         $sendgrid = OmniSmtp::create(\Napoleon\OmniSmtp\Sendgrid::class, $key);
 
-        $response = $sendgrid->setSubject('The Mail Subject')
-            ->setFrom('napoleon@example.com')
-            ->setRecipients('napoleon101392@gmail.com', 'nap.carino@nuworks.ph')
-            ->setContent('<p>Hello From SendGrid OmniMail</p>')
-            ->send();
+        $response = $sendgrid->setSubject($subject = 'The Mail Subject')
+            ->setFrom($sender = 'napoleon@example.com')
+            ->setRecipients($email1 = 'napoleon101392@gmail.com', $email2 = 'nap.carino@nuworks.ph')
+            ->setContent($content = '<p>Hello From SendGrid OmniMail</p>');
 
-        $this->assertTrue($response);
+        $this->assertEquals($response->getData(), [
+            'recipient' => [
+                $email1,
+                $email2
+            ],
+            'sender' => $sender,
+            'subject' => $subject,
+            'content' => $content
+        ]);
     }
 }

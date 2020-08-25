@@ -165,9 +165,23 @@ class SendGrid extends Base
         foreach ($this->recipients as $email) {
             $mail->addTo($email);
 
+            $this->email[] = $email;
+
             unset($email);
         }
 
         return $mail;
+    }
+
+    public function getData()
+    {
+        $data = [
+            'recipient' => $this->recipients,
+            'sender' => $this->from,
+            'subject' => $this->subject,
+            'content' => $this->content
+        ];
+
+        return $data;
     }
 }
