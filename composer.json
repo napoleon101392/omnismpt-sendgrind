@@ -9,7 +9,7 @@
             "email": "napoleon101392@gmail.com"
         }
     ],
-    "minimum-stability": "dev-master",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
         "php": ">=7.3.0",
