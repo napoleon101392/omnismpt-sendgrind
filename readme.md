@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/napoleon101392/omnismpt-sendgrind.svg?branch=master)](https://travis-ci.org/napoleon101392/omnismpt-sendgrind)
+
 ### Installation
 `composer require napoleon/omnismtp-sendgrid`
 
@@ -8,7 +10,7 @@
 ```
 $key = 'api-key';
 
-$sendgrid = \OmniSmtp\OmniSmtp::create(\Napoleon\OmniSmtp\Sendgrid::class, $key);
+$sendgrid = \OmniSmtp\OmniSmtp::create(\Napoleon\OmniSmtp\SendGrid::class, $key);
 
 $sendgrid->setSubject('The Mail Subject')
     ->setFrom('napoleon@example.com')
@@ -22,7 +24,7 @@ $sendgrid->setSubject('The Mail Subject')
 ```
 $key = 'api-key';
 
-$sendgrid = \OmniSmtp\OmniSmtp::create(\Napoleon\OmniSmtp\Sendgrid::class, $key);
+$sendgrid = \OmniSmtp\OmniSmtp::create(\Napoleon\OmniSmtp\SendGrid::class, $key);
 
 $sendgrid->setSubject('The Mail Subject')
     ->setFrom('napoleon@example.com')
