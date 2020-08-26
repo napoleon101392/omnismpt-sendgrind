@@ -25,6 +25,7 @@ $sendgrid->setSubject('The Mail Subject')
 
 ```php
 <?php
+
 $key = 'api-key';
 
 $sendgrid = \OmniSmtp\OmniSmtp::create(\Napoleon\OmniSmtp\SendGrid::class, $key);
