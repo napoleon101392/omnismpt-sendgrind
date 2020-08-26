@@ -7,7 +7,9 @@
 
 #### Single Recipients
 
-```
+```php
+<?php
+
 $key = 'api-key';
 
 $sendgrid = \OmniSmtp\OmniSmtp::create(\Napoleon\OmniSmtp\SendGrid::class, $key);
@@ -21,7 +23,8 @@ $sendgrid->setSubject('The Mail Subject')
 
 #### Multiple Recipients
 
-```
+```php
+<?php
 $key = 'api-key';
 
 $sendgrid = \OmniSmtp\OmniSmtp::create(\Napoleon\OmniSmtp\SendGrid::class, $key);
